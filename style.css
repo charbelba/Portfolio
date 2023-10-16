@@ -7,7 +7,7 @@ body{
 }
 button{
     background-color: #0C8CE9;
-    width:100px;
+    width:110px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     color: white;
@@ -24,12 +24,13 @@ button{
 input{
     padding:10px;
     width:350px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius:5px ;
     color:#eaeaea;
     border: 1px solid #eaeaea;
     box-sizing: border-box;
 }
+
 #hero-email{
     border: 1px solid rgb(196, 196, 196);
 }
@@ -119,6 +120,7 @@ input{
     flex-direction: column;
 }
 .container-blog{
+    margin-bottom:50px;
     justify-content: center;
     align-items: center;
     display: grid;
@@ -245,4 +247,45 @@ input{
 #search{
     font-family: 'Inter', sans-serif;
     display:inline-block;
+}
+
+.container-contact{
+    box-shadow: 0px 5px 10px rgba(26, 26, 26, 0.1);
+    background-color: white;;
+    width:1200px;
+    height:500px;
+    margin-top:100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.contact-wrapper{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px;
+    
+}
+.contact-title{
+    font-size: 32px;
+    font-weight: 600;
+    color:#474747;
+    font-family: 'Inter', sans-serif;
+}
+.contact-image{
+    
+    width:50%;
+    height:100%;
+    background-image: url('https://image.freepik.com/free-photo/top-view-macbook-plain-background_23-2148319710.jpg');
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+#contact-submit{
+    width:100%;
+}
+
+#contact-message{
+   
 }
