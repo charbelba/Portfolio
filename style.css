@@ -29,6 +29,7 @@ input{
     color:#eaeaea;
     border: 1px solid #eaeaea;
     box-sizing: border-box;
+    
 }
 
 #hero-email{
@@ -321,6 +322,7 @@ p{
     font-size:16px;
     font-weight: 600;
     color:#0C8CE9;
+    text-transform: uppercase;
     
 }
 .sub-title{
@@ -331,13 +333,13 @@ p{
 }
 .post-bottom{
     margin-bottom:50px;
-    margin-top:50px;
+    margin-top:100px;
 }
 .bottom-related{
     color:#333333;
     border-top: 1px solid #adadad ;
     width:48px;
-    padding-top:20px;
+    padding-top:15px;
     font-size: 14px;
     margin-bottom:25px;
     font-weight:600;

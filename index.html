@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src ="tools.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
             <ul class="navbar">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><button href="" onclick="scrollToSection('section-blog')">Blog</button></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <div class ="hero-center">
@@ -36,7 +37,7 @@
             <div class = "header-title">Blogs</div>
             <input type="text" id="search" name="Search" placeholder = "Search..."class = "" required>
         </div>
-        <div class = "container-blog">
+        <div class = "container-blog" id ="section-blog">
             <div class ="blog-card">
                
                 <div class = "blog-image"></div>
@@ -53,7 +54,8 @@
             <div class ="blog-date">16th October 2023  No Comments</div>
         </div>
             </div>
-            <div class ="blog-card">
+            <div class ="blog-card" >
+                <a href="blog.html" style ="text-decoration:none;">
                
                 <div class = "blog-image" style = "background-image: url('https://th.bing.com/th/id/OIP.D1tl8JDJmQ6w8-yQdlD23AHaHa?pid=ImgDet&rs=1;')"></div>
                 <div class="blog-badge">AI</div>
@@ -68,6 +70,7 @@
             
             <div class ="blog-date">16th October 2023  No Comments</div>
         </div>
+    </a>
             </div>
             <div class ="blog-card">
                
