@@ -56,9 +56,18 @@ input:focus {
     font-size: 14px;
     list-style: none;
     padding: 0;
-    background-color: transparent;
+    background-color: white;
+    width:100%;
+   margin:0%;
+   height:60px;
+   border:1px solid #f8f8f8;
     display: flex;
+    align-items: center;
     justify-content: center;
+    position:fixed;
+    top:0px;
+    z-index: 2;
+    
 }
 
 .navbar li {
@@ -69,7 +78,7 @@ input:focus {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
-    color: #fff;
+    color: #2e2e2e;
 }
 
 .navbar a:hover {
@@ -162,8 +171,10 @@ input:focus {
     box-shadow: 0px 5px 10px rgba(26, 26, 26, 0.1);
     transition: box-shadow 0.1s ease;
     cursor: pointer;
+    transition: transform 0.3s;
 }
 .blog-card:hover{
+    transform: scale(1.02);
     box-shadow: 0px 10px 10px rgba(26, 26, 26, 0.1);
 }
 .blog-wrapper{
@@ -219,7 +230,7 @@ input:focus {
     float:right;
     backdrop-filter: blur(10px);
     color:white;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(110, 110, 110,0.7);
     font-size:12px;
     top:0px;
     right:0px;
@@ -305,6 +316,7 @@ input:focus {
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-bottom:50px;
     
 }
 .work-title{
@@ -323,7 +335,7 @@ input:focus {
     margin-top:50px;
 
 }
-.work-project{
+.work-project-inner{
     width:350px;
     height:290px;
     border-radius: 10px;
@@ -353,11 +365,11 @@ input:focus {
     object-fit: cover;
     transition: transform 0.3s ease; 
     cursor: pointer;
-    transform:scale(1.4)
+    transform:scale(1)
   }
   
   .project-image:hover {
-    transform: scale(1.7);
+    transform: scale(1.1);
   }
   .project-image:hover .project-text{
     opacity: 1;
@@ -491,4 +503,6 @@ p{
 .topic-badge{
     font-size: 14px;
     color:#777777;
+    text-align: center;
+    
 }
