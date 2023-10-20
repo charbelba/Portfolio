@@ -9,45 +9,12 @@
 </head>
 <body>
     <div class = "container">
-        <style>
-            .navbar {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    list-style: none;
-    padding: 0;
-    background-color: white;
-    width:100%;
-   margin:0%;
-   height:60px;
-   border:1px solid #f8f8f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:fixed;
-    top:0px;
-    
-}
-
-.navbar li {
-    margin: 0;
-}
-
-.navbar a {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: #2e2e2e;
-}
-
-.navbar a:hover {
-    color:#0C8CE9;
-}
-          </style>
-        <ul class="navbar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a>Blog</a></li>
-            <li><a href="#">Contact</a></li>
+       
+         <ul class="navbar">
+            <li><a href = "index.html">Home</a></li>
+            <li><button class ="button-non" onclick="scrollToSection('section-about')">About</button></li>
+            <li><button class ="button-non" onclick="scrollToSection('section-blog')">Blog</button></li>
+            <li><button class ="button-non" onclick="scrollToSection('section-contact')">Contact</button></li>
         </ul>
         <div class = "post-upper">
             <div  class = "post-upper-center">
