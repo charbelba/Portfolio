@@ -22,7 +22,9 @@ body{
 }
 .button-normal {
     background-color: #0C8CE9;
-    width: 110px;
+    width: auto;
+    font-size: 14px;
+    max-height:40px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     color: white;
@@ -39,6 +41,41 @@ body{
 .button-normal:active {
     transform: scale(0.95); /* Shrink the button on press */
 }
+.button-border-grey{
+    background-color: transparent;
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #adadad;
+    color: #777777;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 20px;
+    gap: 10px;
+    transition: transform 0.2s; 
+}
+
+.button-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #adadad;
+    color: #777777;
+    padding: 5px 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 40px;
+    transition: transform 0.2s; 
+}
+
  h3{
     color:#474747;
 }
@@ -78,7 +115,7 @@ input:focus {
     width:100%;
    margin:0%;
    height:60px;
-   border:1px solid #f8f8f8;
+   border: 1px solid rgb(233, 233, 233);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,9 +142,9 @@ input:focus {
 .container-hero{
     align-items: center;
     display:flex;
-    flex-direction: column;
-   background-color:#1F252E;
-   height:900px;
+    justify-content: center;
+    background-color: transparent;
+   height:700px;
    width:100%;
    margin-bottom:50px;
    /*background-image: url('https://wallpapercave.com/wp/wp7039156.jpg');*/
@@ -120,37 +157,79 @@ input:focus {
     width:100%;
 }
 .hero-center{
-    margin-top: 50px;
+    
     align-items: center;
     display: flex;
     flex-direction: column;
+    
 }
 .hero-name{
     font-family: 'Inter', sans-serif;
-    font-size: 60px;
+    font-size: 48px;
     font-weight: 800;
-    color:white;    
+    color:rgb(58, 58, 58);    
     
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000; /* This creates a cursor effect */
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes erasing {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000;
+    }
 }
 .hero-role{
-    font-family: 'Source Code Pro', monospace;
-    font-size: 20px;
-    font-weight: 400;
     
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
     color:#0C8CE9;
     
+}
+.hero-profile{
+    background: linear-gradient(45deg, #F8F8F8, #E8DDD5);
+    width:100px;
+    height:100px;
+    border-radius: 100px;
+    background-color: white;
+    margin-bottom:25px;
 }
 #hero-email{
     font-family: 'Inter', sans-serif;
     
-    background-color: transparent;
-    color:white;
+    background-color: white;
+    color:rgb(34, 34, 34);
     display:inline-block;
     
 }
 .container{
     margin:0;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(255, 255, 255);
     margin:0px;
     font-family: 'Inter', sans-serif;
     justify-content: center;
@@ -302,7 +381,7 @@ input:focus {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .contact-wrapper{
     display:flex;
@@ -430,15 +509,7 @@ input:focus {
     transition: background-color 0.3s ease;
     display:inline-block;
    }
-   .button-icon{
-    background-color: transparent;
-    border:1px solid #0C8CE9;
-    color:#0C8CE9; 
-    width:40px;
-    transition: background-color 0.3s ease;
-    display:inline-block;
-    margin:0px;
-   }
+
    .project-button:hover{
     background-color: #0C8CE9;
     color:white;
@@ -543,4 +614,25 @@ p{
     color:#777777;
     text-align: center;
     
+}
+.hero-socials{
+    
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap:15px;
+}
+.social{
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    border: 1px solid rgb(196, 196, 196);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+.social:hover{
+    border-color: #0C8CE9;
 }

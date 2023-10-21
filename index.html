@@ -12,22 +12,39 @@
     <title>Document</title>
 </head>
 <body style = "margin:0;">
-   
+    <ul class="navbar">
+        <li><a href = "index.html">Home</a></li>
+        <li><button class ="button-non" onclick="scrollToSection('section-about')">About</button></li>
+        <li><button class ="button-non" onclick="scrollToSection('section-blog')">Blog</button></li>
+        <li><button class ="button-non" onclick="scrollToSection('section-contact')">Contact</button></li>
+        <li><button style = "margin-left: auto;" class ="button-border-grey" onclick="scrollToSection('section-contact')">Download CV
+            <img src = "icons/download.svg"  style = "height:20px;width:20px;">
+        </button></li>
+    </ul>
     <div class = "container">
         <div class ="container-hero">
          
-            <ul class="navbar">
-                <li><a href = "index.html">Home</a></li>
-                <li><button class ="button-non" onclick="scrollToSection('section-about')">About</button></li>
-                <li><button class ="button-non" onclick="scrollToSection('section-blog')">Blog</button></li>
-                <li><button class ="button-non" onclick="scrollToSection('section-contact')">Contact</button></li>
-            </ul>
+            
             <div class ="hero-center">
-            <div class ="hero-name">CHARBEL BOU ABDO</div>
-        <div class = "hero-role">Software Engineer</div>
-        <div style = "margin-top: 50px;" >
+                <div class = "hero-profile"></div>
+                <div class = "hero-role">Software Engineer</div>
+            <div class ="hero-name">Charbel Bou Abdo</div>
+ 
+        <p style = "width:500px;text-align: center;">Hello Friends! Thanks for dropping by. I'm Lewis, a Power Platform Functional Engineer and Microsoft Business Applications MVP. Keep scrolling to learn more about me, or check out my content at the blog tab.</p>
+        <div style = "margin-top: 25px;margin-bottom: 100px;" >
         <input type="text" id="hero-email" name="Search" placeholder ="Email"class = "" required>
-        <button>Subscribe</button>
+        <button class = "button-normal" style = "margin-right:0px;">Subscribe</button>
+    </div>
+    <div class ="hero-socials">
+        <div class = "social">
+            <img src = "icons/brand-x.svg"  style = "height:20px;width:20px;">
+        </div>
+        <div class = "social">
+            <img src = "icons/linkedin.svg"  style = "height:20px;width:20px;">
+        </div>
+        <div class = "social">
+            <img src = "icons/brand-github.svg"  style = "height:20px;width:20px;">
+        </div>
     </div>
     </div>
         </div>
@@ -108,8 +125,8 @@
             
             <div class ="project-text"></div>
         </div>
-        <h3 style ="margin-bottom:7px;margin-top:7px;">Cubis</h3>
-        <p style = "margin-top:10px;margin-bottom:0px;">A 3D puzzle game for mobile built using Unity </p>
+        <h3 style ="margin-bottom:7px;margin-top:7px;font-size: 16px;">Cubis</h3>
+        <p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">A 3D puzzle game for mobile built using Unity </p>
     </div>
     <div class = "work-project">
         <div class = "work-project-inner" >
@@ -123,8 +140,8 @@
         
         <div class ="project-text"></div>
     </div>
-    <h3 style ="margin-bottom:5px;margin-top:7px;">E-Commerce API</h3>
-    <p style = "margin-top:10px;margin-bottom:0px;">An E-Commerce api built using Java Spring Boot</p>
+    <h3 style ="margin-bottom:5px;margin-top:7px;font-size: 16px;">E-Commerce API</h3>
+    <p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">An E-Commerce api built using Java Spring Boot</p>
 </div>
 <div class = "work-project">
     <div class = "work-project-inner" style = "border: 1px solid rgb(233, 233, 233);">
@@ -138,8 +155,8 @@
     
     <div class ="project-text"></div>
 </div>
-<h3 style ="margin-bottom:5px;margin-top:7px;">2D Game Engine</h3>
-<p style = "margin-top:10px;margin-bottom:0px;">A Simple yet powerful 2D Game Engine built using java</p>
+<h3 style ="margin-bottom:5px;margin-top:7px;font-size: 16px;">2D Game Engine</h3>
+<p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">A Simple yet powerful 2D Game Engine built using java</p>
 </div>
 <div class = "work-project">
     <div class = "work-project-inner">
@@ -153,8 +170,8 @@
     
     <div class ="project-text"></div>
 </div>
-<h3 style ="margin-bottom:5px;margin-top:7px;">Chatting Application</h3>
-<p style = "margin-top:10px;margin-bottom:0px;">An end-to-end Encryped Chatting App built using Java</p>
+<h3 style ="margin-bottom:5px;margin-top:7px;font-size: 16px;">Chatting Application</h3>
+<p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">An end-to-end Encryped Chatting App built using Java</p>
 </div>
 
 
@@ -170,8 +187,8 @@
     
     <div class ="project-text"></div>
 </div>
-<h3 style ="margin-bottom:5px;margin-top:7px;">CSV Library</h3>
-<p style = "margin-top:10px;margin-bottom:0px;">Saving files have never been easier any Object in Java</p>
+<h3 style ="margin-bottom:5px;margin-top:7px;font-size: 16px;">CSV Library</h3>
+<p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">Saving files have never been easier any Object in Java</p>
 </div>
 <div class = "work-project">
     <div class = "work-project-inner" style = "border: 1px solid rgb(233, 233, 233);">
@@ -185,13 +202,15 @@
     
     <div class ="project-text"></div>
 </div>
-<h3 style ="margin-bottom:5px;margin-top:7px;">Message Broker</h3>
-<p style = "margin-top:10px;margin-bottom:0px;">A Highly decoupled asynchronous messaging system</p>
+<h3 style ="margin-bottom:5px;margin-top:7px;font-size: 16px;">Message Broker</h3>
+<p style = "margin-top:10px;margin-bottom:0px;font-size: 14px;">A Highly decoupled asynchronous messaging system</p>
 </div>
     </div>
-    <div >
+    <div style = "display:flex;flex-direction: row; justify-content:space-between;gap: 10px;">
     <button class ="project-button">Check Out More</button>
-    <button class = "button-icon">git</button>
+    <button class = "button-icon">
+        <img src = "icons/brand-github.svg"  style = "height:24px;width:24px;">
+    </button>
 </div>
 </div>
 
@@ -202,10 +221,15 @@
             
             <input type="text" id="contact-name" name="Name" placeholder = "Name"class = "" required>
             <input type="email" id="contact-email" name="Email" placeholder = "Email"class = "" required>
-            <input type="text" id="contact-message" name="Message" placeholder = "Message"class = "" required>
+            <input type="text" id="contact-message" name="Message" placeholder = "Message"class = "" style =""required>
             <button class = "button-normal"id ="contact-submit">Submit</button>
         </div>
             <div class = "contact-image"></div>
+        </div>
+
+        <div class = "container-footer" style="background: linear-gradient(45deg, #F8F8F8, #E8DDD5);
+        ;height:450px;width: 100%;">
+
         </div>
 
         
