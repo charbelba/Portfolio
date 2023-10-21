@@ -26,8 +26,20 @@ p{
     transition: transform 0.3s;
     flex: 1;
 }
+.button-big:hover .button-big-title{
+    color:#0872be;
+
+}
+.button-big:hover .path{
+    fill:#0872be;
+    
+}
+
 .button-big:hover{
   transform:translateY(-5px);
+}
+.button-big-title{
+    font-size:16px;font-weight:600;color:#313131
 }
 .button-non{
     background-color: transparent;
@@ -147,7 +159,7 @@ input:focus {
    border: 1px solid rgb(233, 233, 233);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position:fixed;
     top:0px;
     z-index: 2;
@@ -156,9 +168,11 @@ input:focus {
 
 .navbar li {
     margin: 0;
+    align-self: center;
 }
 
 .navbar a {
+    align-self: center;
     display: block;
     padding: 15px 20px;
     text-decoration: none;
@@ -168,6 +182,7 @@ input:focus {
 .navbar a:hover {
     color:#0C8CE9;
 }
+
 .container-hero{
     align-items: center;
     display:flex;
@@ -176,8 +191,10 @@ input:focus {
    height:900px;
    width:100%;
    margin-bottom:50px;
-  /* background-image: url('images/1619300411176.png');*/
+   background-image: url('images/blocky-pc-upscaled\ 1.png');
    background-size: cover;
+   background-color: rgba(0, 0, 0, 0.1); /* Dark overlay color */
+ 
    
 }
 .overlay{
@@ -197,11 +214,11 @@ input:focus {
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     font-weight: 800;
-    color:rgb(58, 58, 58);    
+    color:rgb(255, 255, 255);    
     
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid #000; /* This creates a cursor effect */
+    border-right:2px solid rgb(255, 255, 255); /* This creates a cursor effect */
     animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -228,7 +245,7 @@ input:focus {
         border-color: transparent;
     }
     50% {
-        border-color: #000;
+        border-color:rgb(255, 255, 255);
     }
 }
 .hero-role{
@@ -239,11 +256,13 @@ input:focus {
     font-weight: 700;
     margin-bottom: 10px;
     color:#0C8CE9;
+    text-shadow: 0px 0px 14px rgba(26, 98, 231, 0.7);
+
     
 }
 .hero-profile{
     background: linear-gradient(45deg, #F8F8F8, #E8DDD5,#ccdeeb);
-    border:1px solid #a6cae4;
+    border:1px solid #0C8CE9;
     width:100px;
     height:100px;
     border-radius: 100px;
@@ -346,7 +365,7 @@ input:focus {
 .blog-date{
     font-size:12px;
    
-    color:#bebebe;
+    color:#adadad;
 }
 .blog-badge{
     font-family: 'Inter', sans-serif;
@@ -370,14 +389,15 @@ input:focus {
 }
 
 .blog-profile{
-    
+    background-image: url('images/cba.jpg');
+    background-size: cover;
     border-radius: 50px;
     width:60px;
     height:60px;
     position:absolute;
     top:270px;
     left:20px;
-    background-color: #e2e2e2;
+    background-color: transparent;
 }
 
 .blog-wrapper-bottom{
@@ -567,8 +587,8 @@ input:focus {
    
 }
 .post-upper{
-    background-image: url('images/TaskController-cover.png');
-    filter: brightness(0.7);
+    background-image: url('images/TaskController-cover\ 1.png');
+    
     width:100%;
     background-size: cover; /* Make the background image cover the entire div */
     background-position: center;
@@ -652,21 +672,29 @@ input:focus {
     display:flex;
     justify-content: space-between;
     flex-direction: row;
-    gap:15px;
+    gap:20px;
 }
 .social{
     width:40px;
     height:40px;
     border-radius: 50px;
-    border: 1px solid rgb(196, 196, 196);
+    border: 1px solid rgb(255, 255, 255);
     display:flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: border-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
 }
 .social:hover{
     border-color: #0C8CE9;
+    background-color: #4198d627;
+    transform: scale(1.1);
+    
+}
+.social:hover svg{
+    stroke:#0C8CE9;
     
 }
 .annotation{

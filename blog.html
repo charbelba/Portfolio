@@ -13,13 +13,20 @@
 <body>
     <div class = "container">
        
-         <ul class="navbar">
-            <li><a href = "index.html">Home</a></li>
-            <li><button class ="button-non" onclick="scrollToSection('section-about')">About</button></li>
-            <li><button class ="button-non" onclick="scrollToSection('section-blog')">Blog</button></li>
-            <li><button class ="button-non" onclick="scrollToSection('section-contact')">Contact
-               
-            </button></li>
+        <ul class="navbar">
+            <li style = "background-color: rgb(241, 241, 241);border-radius: 50px;width:40px;height:40px;margin-left:50px;"></li>
+            <li>
+                <div style  ="display: flex;justify-content:space-between;flex-direction:row;">
+                    <a href = "index.html">Home</a>
+            <button class ="button-non" onclick="scrollToSection('section-about')">About</button>
+           <button class ="button-non" onclick="scrollToSection('section-blog')">Blog</button>
+            <button class ="button-non" onclick="scrollToSection('section-contact')">Contact</button>   
+            
+                </div>
+            </li>
+            <li><button style = "align-self: flex-end;" class ="button-border-grey" onclick="scrollToSection('section-contact')">Download CV
+                <img src = "icons/download.svg"  style = "height:20px;width:20px;">
+            </button></li>  
         </ul>
         <div class = "post-upper">
         
@@ -40,7 +47,7 @@
             <li>PUT /tasks/{taskId}: Update an existing task by its ID.</li>
             <li>DELETE /tasks/{taskId}: Delete a task by its ID.</li>
         </ul>
-        <div class = "sub-title" style = "margin-bottom: 0px;">Creating our RestController Class</div>
+        <div class = "sub-title" style = "margin-bottom: 0px;">Creating our TaskController Class</div>
         <p>We need to create first our controller using
             <span class = "annotation">@RestController</span>
            annotation it acts as an entry point to our methods  and we also need to give it a path using
@@ -65,23 +72,23 @@
         <span class = "annotation">@DeleteMapping</span>
         <div class = "sub-title">Deleting a Task</div>
         <div> <img src="images/TaskController-DeleteMapping.png" style = "width:1200px;margin-bottom:15px;">  </div>
-        <p>TThis function allows you to delete a task by its ID. It takes the taskId as a path variable and searches for the task with a matching ID in the list of tasks. If the task is found, it is removed from the list, effectively deleting the task. The function returns a message confirming the deletion.</p>
+        <p>This function allows you to delete a task by its ID. It takes the taskId as a path variable and searches for the task with a matching ID in the list of tasks. If the task is found, it is removed from the list, effectively deleting the task. The function returns a message confirming the deletion.</p>
 
 
         <div style = "margin-top:50px;margin-bottom:75px;display: flex;flex-direction: row;justify-content: space-between;gap:25px;">
             <a class ="button-big">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" fill-rule="evenodd" d="M6.924 3.576a.6.6 0 0 1 0 .848L3.95 7.4H13.5a.6.6 0 1 1 0 1.2H3.949l2.975 2.976a.6.6 0 0 1-.848.848l-4-4a.6.6 0 0 1 0-.848l4-4a.6.6 0 0 1 .848 0Z" clip-rule="evenodd"></path></svg>
-            <div style = "float:right;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" class = "path"fill-rule="evenodd" d="M6.924 3.576a.6.6 0 0 1 0 .848L3.95 7.4H13.5a.6.6 0 1 1 0 1.2H3.949l2.975 2.976a.6.6 0 0 1-.848.848l-4-4a.6.6 0 0 1 0-.848l4-4a.6.6 0 0 1 .848 0Z" clip-rule="evenodd"> </path></svg>
+            <div >
                 <div style ="font-size:12px;color:#c5c5c5">Previous</div>
-                <div style ="font-size:16px;font-weight:600;color:#313131">Array</div>
+                <div class ="button-big-title">Array</div>
             </div>
             </a>
             <a class ="button-big">
-                <div style = "float:right;">
-                    <div style ="font-size:12px;color:#c5c5c5">Next</div>
-                    <div style ="font-size:16px;font-weight:600;color:#313131">Build RestController Part 2</div>
+                <div >
+                    <div  style ="font-size:12px;color:#c5c5c5">Next</div>
+                    <div class ="button-big-title" >Build RestController Part 2</div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" fill-rule="evenodd" d="M9.076 3.576a.6.6 0 0 1 .848 0l4 4a.6.6 0 0 1 0 .848l-4 4a.6.6 0 0 1-.848-.848L12.052 8.6H2.5a.6.6 0 0 1 0-1.2h9.552L9.076 4.424a.6.6 0 0 1 0-.848Z" clip-rule="evenodd"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" class = "path" fill-rule="evenodd" d="M9.076 3.576a.6.6 0 0 1 .848 0l4 4a.6.6 0 0 1 0 .848l-4 4a.6.6 0 0 1-.848-.848L12.052 8.6H2.5a.6.6 0 0 1 0-1.2h9.552L9.076 4.424a.6.6 0 0 1 0-.848Z" clip-rule="evenodd"></path></svg>
             
             </a>
         </div>
