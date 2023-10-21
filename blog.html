@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -19,25 +22,74 @@
             </button></li>
         </ul>
         <div class = "post-upper">
+        
             <div  class = "post-upper-center">
-            <div class ="upper-title">What’s the fuss about with Copilot in Power Apps? Get started with these 5 prompts!</div>
-            <div class = "upper-date">16th October 2023</div>
+            <div class ="upper-title">How to create a Java Spring Boot RestController for CRUD operations</div>
+            <div class = "upper-date">21th October 2023</div>
         </div>
        
         </div>
        <div class = "container-post">
         
-        <p >Something really cool I spotted when testing out these different prompts is that you’ll notice the data in the table as sample data is contextually relevant to the prompt you gave Copilot. So in my blogging prompt for example, Copilot has given me sample data on ideas for blog posts including Power Platform and software engineering topics! Amazing! 🤩</p>
-        <div class = "sub-title">Collecting RSVPs for an upcoming event</div>
-        <div> <img src="images/code-0.png" style = "width:1200px;">  </div>
-        <p >Something really cool I spotted when testing out these different prompts is that you’ll notice the data in the table as sample data is contextually relevant to the prompt🤩</p>
-        <div class = "sub-title">Pre-Process Data</div>
-        <div> <img src="images/code-0.png" style = "width:1200px;margin-bottom:100px;">  </div>
+        <p >
+            In this example, we are working with a simple in-memory list of tasks for demonstration purposes. In a real-world scenario, you would typically interact with a database or some other data storage mechanism to perform these CRUD operations on tasks. The controller handles HTTP requests and responses for creating, retrieving, updating, and deleting tasks. It's a basic implementation to illustrate how these CRUD operations work in a Spring Boot application.
+            In this example, we've defined a TaskController with four endpoints:</p>
+        <ul>
+            <li>POST /tasks: Create a new task.</li>
+            <li>GET /tasks/{taskId}: Retrieve a task by its ID.</li>
+            <li>PUT /tasks/{taskId}: Update an existing task by its ID.</li>
+            <li>DELETE /tasks/{taskId}: Delete a task by its ID.</li>
+        </ul>
+        <div class = "sub-title" style = "margin-bottom: 0px;">Creating our RestController Class</div>
+        <p>We need to create first our controller using
+            <span class = "annotation">@RestController</span>
+           annotation it acts as an entry point to our methods  and we also need to give it a path using
+           <span class = "annotation">@RestMapping("/task")</span>
+           suppose we are working locally we can access this controller via 
+           <span class = "annotation" style = "color:#0C8CE9">http://127.0.0.1:8080/task</span>
+        </p>
+        <div> <img src="images/TaskController-Object.png" style = "width:1200px;margin-bottom:50px;">  </div>
+        
+        <span class = "annotation">@PostMapping</span>
+        <div class = "sub-title">Adding a Task </div>
+        <div> <img src="images/TaskController-PostMapping.png" style = "width:1200px;margin-bottom:15px;">  </div>
+        <p>This function allows you to create a new task. It accepts a JSON object representing the task in the request body. The new task is added to the list of tasks, simulating the creation of a new task in your application.</p>
+        <span class = "annotation">@GetMapping</span>
+        <div class = "sub-title">Getting a Task </div>
+        <div> <img src="images/TaskController-GetMapping.png" style = "width:1200px;margin-bottom:15px;">  </div>
+        <p>This function allows you to retrieve a task by its unique ID. It takes the taskId as a path variable and searches for a task in the list of tasks with a matching ID. If found, it returns the details of the task; otherwise, it throws a </p>
+        <span class = "annotation">@PutMapping</span>
+        <div class = "sub-title">Updating a Task</div>
+        <div> <img src="images/TaskController-PutMapping.png" style = "width:1200px;margin-bottom:15px;">  </div>
+        <p>This function allows you to update an existing task by its ID. It takes the taskId as a path variable and the updated task details in the request body as a JSON object. It searches for the task with the specified ID and, if found, updates its name and description with the values provided in the request. If the task does not exist, it throws a TaskNotFoundException.</p>
+        <span class = "annotation">@DeleteMapping</span>
+        <div class = "sub-title">Deleting a Task</div>
+        <div> <img src="images/TaskController-DeleteMapping.png" style = "width:1200px;margin-bottom:15px;">  </div>
+        <p>TThis function allows you to delete a task by its ID. It takes the taskId as a path variable and searches for the task with a matching ID in the list of tasks. If the task is found, it is removed from the list, effectively deleting the task. The function returns a message confirming the deletion.</p>
+
+
+        <div style = "margin-top:50px;margin-bottom:75px;display: flex;flex-direction: row;justify-content: space-between;gap:25px;">
+            <a class ="button-big">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" fill-rule="evenodd" d="M6.924 3.576a.6.6 0 0 1 0 .848L3.95 7.4H13.5a.6.6 0 1 1 0 1.2H3.949l2.975 2.976a.6.6 0 0 1-.848.848l-4-4a.6.6 0 0 1 0-.848l4-4a.6.6 0 0 1 .848 0Z" clip-rule="evenodd"></path></svg>
+            <div style = "float:right;">
+                <div style ="font-size:12px;color:#c5c5c5">Previous</div>
+                <div style ="font-size:16px;font-weight:600;color:#313131">Array</div>
+            </div>
+            </a>
+            <a class ="button-big">
+                <div style = "float:right;">
+                    <div style ="font-size:12px;color:#c5c5c5">Next</div>
+                    <div style ="font-size:16px;font-weight:600;color:#313131">Build RestController Part 2</div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" data-rnwibasecard--1ghhsy9-hover="true" data-rnwi-handle="nearest" class="r-1rasi3h" style="vertical-align: middle; width: 24px; height: 24px;"><path fill="currentColor" fill-rule="evenodd" d="M9.076 3.576a.6.6 0 0 1 .848 0l4 4a.6.6 0 0 1 0 .848l-4 4a.6.6 0 0 1-.848-.848L12.052 8.6H2.5a.6.6 0 0 1 0-1.2h9.552L9.076 4.424a.6.6 0 0 1 0-.848Z" clip-rule="evenodd"></path></svg>
+            
+            </a>
+        </div>
         <div class = "sub-title">Enjoy this kind of content ?</div>
         <div >
         <p >Did you like this content? Check out some of the other posts on my blog, and if you like those too, be sure to subscribe to get my posts directly<br> in your inbox for free! </p>
         <input style = "display:inline-block;padding:12px;" type="text" id="enjoy-email" name="email" placeholder ="Email"class = "" required>
-        <button style = "display:inline-block;">Subscribe</button>
+        <button class = "button-normal"style = "display:inline-block;">Subscribe</button>
     </div>
         <div class = "post-bottom">
             <div class = "bottom-related">Related</div>

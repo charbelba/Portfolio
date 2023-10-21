@@ -12,6 +12,23 @@ p{
     margin-bottom:25px;
     
 }
+.button-big{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(227, 232, 237);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding:15px;
+    width:400px;
+    height:50px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    flex: 1;
+}
+.button-big:hover{
+  transform:translateY(-5px);
+}
 .button-non{
     background-color: transparent;
     border: none;
@@ -30,6 +47,7 @@ p{
 .button-normal {
     background-color: #0C8CE9;
     width: auto;
+    height:43px;
     font-size: 14px;
     max-height:40px;
     font-weight: 600;
@@ -43,10 +61,14 @@ p{
     margin-right: 20px;
     display: inline-block;
     transition: transform 0.2s; /* Add a smooth transition effect */
+  
 }
 
 .button-normal:active {
     transform: scale(0.95); /* Shrink the button on press */
+}
+.button-normal:hover{
+    background-color: #0872be;
 }
 .button-border-grey{
     background-color: transparent;
@@ -69,7 +91,7 @@ p{
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    width: auto;
+    width: 43px;
     font-family: 'Inter', sans-serif;
     border: 1px solid #adadad;
     color: #777777;
@@ -79,7 +101,7 @@ p{
     cursor: pointer;
     margin-left: 10px;
     margin-right: 20px;
-    width: 40px;
+
     transition: transform 0.2s; 
 }
 
@@ -94,7 +116,7 @@ input {
     width: 350px;
     font-size: 14px;
     border-radius: 5px;
-   
+    height:43px;
     border: 2px solid #eaeaea;
     box-sizing: border-box;
     outline: none;
@@ -154,7 +176,8 @@ input:focus {
    height:900px;
    width:100%;
    margin-bottom:50px;
-   /*background-image: url('https://wallpapercave.com/wp/wp7039156.jpg');*/
+  /* background-image: url('images/1619300411176.png');*/
+   background-size: cover;
    
 }
 .overlay{
@@ -544,8 +567,8 @@ input:focus {
    
 }
 .post-upper{
-    background-image: url('images/ai.png');
-    
+    background-image: url('images/TaskController-cover.png');
+    filter: brightness(0.7);
     width:100%;
     background-size: cover; /* Make the background image cover the entire div */
     background-position: center;
@@ -645,4 +668,7 @@ input:focus {
 .social:hover{
     border-color: #0C8CE9;
     
+}
+.annotation{
+    font-family: 'Source Code Pro', monospace;font-weight: 300;font-size: 16px;color:#dd6718
 }
