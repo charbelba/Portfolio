@@ -12,7 +12,7 @@ function typeText() {
     const typeInterval = setInterval(function () {
         textElement.textContent += text[i];
         i++;
-        if (i > text.length) {
+        if (i > text.length ) {
             clearInterval(typeInterval);
         }
     }, 100);

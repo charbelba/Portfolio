@@ -5,6 +5,13 @@ body{
     margin:0px;
     font-family: 'Inter', sans-serif;
 }
+
+p{
+    font-size: 16px;
+    color:#777777;
+    margin-bottom:25px;
+    
+}
 .button-non{
     background-color: transparent;
     border: none;
@@ -144,7 +151,7 @@ input:focus {
     display:flex;
     justify-content: center;
     background-color: transparent;
-   height:700px;
+   height:900px;
    width:100%;
    margin-bottom:50px;
    /*background-image: url('https://wallpapercave.com/wp/wp7039156.jpg');*/
@@ -212,7 +219,8 @@ input:focus {
     
 }
 .hero-profile{
-    background: linear-gradient(45deg, #F8F8F8, #E8DDD5);
+    background: linear-gradient(45deg, #F8F8F8, #E8DDD5,#ccdeeb);
+    border:1px solid #a6cae4;
     width:100px;
     height:100px;
     border-radius: 100px;
@@ -246,16 +254,17 @@ input:focus {
     gap: 50px;
     width:1200px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .container-blog{
-        justify-content: center;
-        align-items: center;
-        display: grid;
+       
         grid-template-columns:  500px;
-        gap: 25px;
-        width:1200px;
+       
+    }
+    .work-wrapper{
+        grid-template-columns: 350px;
     }
 }
+
 .blog-card{
     display:flex;
     justify-content: space-between;
@@ -435,6 +444,12 @@ input:focus {
     margin-top:50px;
 
 }
+@media screen and (max-width: 700px) {
+   
+    .work-wrapper{
+        grid-template-columns: 350px;
+    }
+}
 .work-project-inner{
     width:350px;
     height:290px;
@@ -521,12 +536,6 @@ input:focus {
 
 
 
-p{
-    font-size: 16px;
-    color:#5e5e5e;
-    margin-bottom:25px;
-    
-}
 .container-post{
     width:1200px;
     justify-content:space-between;
@@ -635,4 +644,5 @@ p{
 }
 .social:hover{
     border-color: #0C8CE9;
+    
 }
