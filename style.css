@@ -307,7 +307,7 @@ input:focus {
     display: grid;
     grid-template-columns: 500px 500px;
     gap: 50px;
-    width:1200px;
+    
 }
 @media screen and (max-width: 700px) {
     .container-blog{
@@ -495,7 +495,7 @@ input:focus {
     display: grid;
     grid-template-columns: 350px 350px 350px;
     gap: 25px;
-    width:1200px;
+   
     margin-bottom:50px;
     margin-top:50px;
 
@@ -504,6 +504,9 @@ input:focus {
    
     .work-wrapper{
         grid-template-columns: 350px;
+    }
+    .contact-image{
+        display: none;
     }
 }
 .work-project-inner{
