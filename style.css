@@ -652,7 +652,7 @@ input:focus {
 }
 .bottom-related{
     color:#333333;
-    border-top: 1px solid #adadad ;
+    border-top: 1px solid #eeeeee ;
     width:48px;
     padding-top:15px;
     font-size: 14px;
@@ -663,7 +663,7 @@ input:focus {
 
 .bottom-topic{
     display: inline-block;
-    margin-right:75px;
+    margin-right:50px;
 }
 .topic-title{
     color:#0C8CE9;
