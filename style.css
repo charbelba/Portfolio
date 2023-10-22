@@ -291,6 +291,7 @@ input:focus {
     
 }
 .container{
+    overflow: hidden;
     margin:0;
     background-color: rgb(255, 255, 255);
     margin:0px;
