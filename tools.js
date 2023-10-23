@@ -1,3 +1,19 @@
+const backgroundDiv = document.querySelector('.container-hero');
+console.log(backgroundDiv, 'hello'); // Corrected the console.log statement
+
+const imageUrls = ['images/gradient 1.png', 'images/gradient 1 (2).png']; // Corrected image URLs
+let currentImageIndex = 0;
+
+function changeBackground() {
+  backgroundDiv.style.backgroundImage = `url('${imageUrls[currentImageIndex]}')`;
+  currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+}
+
+// Call the changeBackground function every 5 seconds (adjust the interval as needed)
+setInterval(changeBackground, 5000);
+
+
+
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
@@ -20,3 +36,6 @@ function typeText() {
 
 // Call typeText to fill in the text
 typeText();
+
+
+

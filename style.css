@@ -204,9 +204,10 @@ input:focus {
    height:900px;
    width:100%;
    margin-bottom:50px;
-   background-image: url('images/blocky-pc-upscaled\ 1.png');
+   background-image: url('images/gradient\ 1\ \(2\).png');
    background-size: cover;
    background-color: rgba(0, 0, 0, 0.1); /* Dark overlay color */
+   transition: background-image 1s ease;
  
    
 }
@@ -217,18 +218,29 @@ input:focus {
     width:100%;
 }
 .hero-center{
-    
+    animation: fadeInUp 0.8s ease both;
     align-items: center;
     display: flex;
     flex-direction: column;
-    
+    /* Animation for fading in and moving from bottom to top */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Start with 0 opacity (invisible) */
+    transform: translateY(25%); /* Start below the box (hidden) */
+  }
+  100% {
+    opacity: 1; /* End with full opacity (visible) */
+    transform: translateY(0); /* End at the top (fully visible) */
+  }
 }
 .hero-name{
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     font-weight: 800;
     color:rgb(255, 255, 255);    
-    
+    animation: fadeInUp 2s ease both;
     white-space: nowrap;
     overflow: hidden;
     border-right:2px solid rgb(255, 255, 255); /* This creates a cursor effect */
@@ -262,7 +274,7 @@ input:focus {
     }
 }
 .hero-role{
-    
+    animation: fadeInUp 2s ease both;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -274,6 +286,7 @@ input:focus {
     
 }
 .hero-profile{
+    animation: fadeInUp 2s ease both;
     background: linear-gradient(45deg, #F8F8F8, #E8DDD5,#ccdeeb);
     border:1px solid #0C8CE9;
     width:100px;
@@ -302,16 +315,21 @@ input:focus {
     flex-direction: column;
 }
 .container-blog{
+
+
+    
+}
+.panel-blog{
+   
     margin-bottom:50px;
     justify-content: center;
     align-items: center;
     display: grid;
     grid-template-columns: 500px 500px;
     gap: 50px;
-    
 }
 @media screen and (max-width: 700px) {
-    .container-blog{
+    .panel-blog{
        
         grid-template-columns:  500px;
        
@@ -447,7 +465,7 @@ input:focus {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
 }
 .contact-wrapper{
     display:flex;
@@ -716,4 +734,66 @@ input:focus {
 }
 .annotation{
     font-family: 'Source Code Pro', monospace;font-weight: 300;font-size: 16px;color:#dd6718
+}
+
+.container-footer{
+  background: linear-gradient(45deg, #242424, #292929);
+        ;height:500px;width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+}
+
+.footer-center{
+    width:500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+}
+
+.footer-worktogether{
+    border-radius: 5px;
+    position:absolute;
+    top:-120px;
+    height:125px;
+    width:1200px;
+    background-color: white;
+    border:1px solid #eeeeee;
+   
+}
+.footer-title{
+    text-align: center;
+    font-size: 24px;
+    color:white;
+    font-weight: 600;
+    margin-bottom: 35px;;
+}
+
+.footer-worktogether{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.worktogether-title{
+    text-align: center;
+    font-size: 24px;
+    color:rgb(31, 31, 31);
+    font-weight: 600;
+    margin-bottom:5px;
+}
+
+.footer-crafted{
+    color:rgb(90, 90, 90);
+    
+}
+.footer-email{
+    text-decoration: underline;
+    color:#0C8CE9;
+    cursor: pointer;
 }
