@@ -162,16 +162,19 @@ input:focus {
    margin:0%;
    height:60px;
    border: 1px solid rgb(233, 233, 233);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    
     position:fixed;
     top:0px;
     z-index: 2;
     
 }
 .navbar-center{
-    display: flex;justify-content:space-between;flex-direction:row;
+    display: flex;justify-content:center;
+    gap:10px;
+    flex-direction:row;
 }
 @media screen and (max-width: 700px) {
 .navbar-center{
@@ -182,6 +185,7 @@ input:focus {
 .navbar li {
     margin: 0;
     align-self: center;
+    
 }
 
 .navbar a {
